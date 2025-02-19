@@ -4,11 +4,13 @@ This repo showcases an issue with the viem library when interacting with the bal
 
 ## Setup
 
-Provide a FORK_URL in the .env file.
+1. Rename `env.local` to `.env` and provide a `FORK_URL`.
 
-```bash
-pnpm install
-```
+2. Install dependencies
+
+    ```bash
+    pnpm install
+    ```
 
 ## Run
 
