@@ -1,0 +1,23 @@
+{
+  "name": "b-sdk-viem-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsx ./index.ts"
+  },
+  "dependencies": {
+    "viem": "2.23.3"
+  },
+  "devDependencies": {
+    "@viem/anvil": "^0.0.10",
+    "dotenv": "^16.4.7",
+    "@types/node": "^22.13.4",
+    "tsx": "4.19.3",
+    "typescript": "5.7.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
