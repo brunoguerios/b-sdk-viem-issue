@@ -40,8 +40,8 @@ const client = createTestClient({
     .extend(publicActions)
     .extend(walletActions);
 
-// setup testAddress via setStorate or impersonateAccount
-const testAddress = await setupTestAddress("setStorage");
+// setup testAddress via setStorate or impersonate
+const testAddress = await setupTestAddress("impersonate");
 
 // approve tokens to be spent
 await approveTokens();
@@ -118,8 +118,12 @@ async function setupTestAddress(
         await setTokenBalances(
             client,
             testAddress,
-            [USDT.address],
-            [USDT.slot]
+            [USDT.address, USDC.address],
+            [USDT.slot, USDC.slot] as number[],
+            [
+                parseUnits("1000", USDT.decimals),
+                parseUnits("1000", USDC.decimals),
+            ]
         );
     }
     return testAddress;
