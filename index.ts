@@ -156,7 +156,12 @@ for (let i = 0; i < 100; i++) {
             functionName: "addLiquidityUnbalancedToERC4626Pool",
             args,
         });
-        console.log("result: ", result);
+
+        console.log("\n\n");
+        console.log("-- SIMULATION SUCCEEDS even though transaction fails --");
+        console.log("simulation result: ", result);
+        console.log("\n\n");
+
         await anvil.stop();
         throw new Error("failed transaction");
     }
